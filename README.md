@@ -2,7 +2,7 @@
 
 Instituto Federal Catarinense - Curso Técnico em Informática - Projeto Integrador 2021
 
-S.E.C.E. - SUPORTE ESPECIALIZADO PARA CRIANÇAS ESPECIAIS
+P.S.E.C - PROJETO DE SUPORTE ESPECIAL PARA CRIANÇAS
 
 / ----------------------------------------------------------------------------------------------------------------------------------------------------- /
 
