@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+    {% block content %}
+            <section>
+                <h2 class="page_title">Contato</h2>
+                <div class="row p-3 m-0">
+                    <div class="col p-5">
+                        <div class="post px-md-5 py-md-4">
+                            <h3 class="my-3">Precisa de Ajuda??</h3>
+                            <p class="text-muted mb-4">Olá, Posso ajudar? Preencha o formulário abaixo e responderemos sua dúvida.</p>
+                                <form name="formulario" class="col-12 mt-md-3 mx-0 px-0" method="post" action="enviado.html" onsubmit="return validar(formulario)"></form>
+                                    <div class="row">
+                                        <div class="col-12 mt-3 mt-md-0 col-md-6">
+                                            <label for="firstName">Primeiro Nome</label>
+                                            <input type="text" id="firstName" placeholder="Digite seu Primeiro Nome" class="form-control">
+                                        </div>
+                                        <div class="col-12 mt-3 mt-md-0 col-md-6">
+                                            <label for="lastName">Ultimo Nome</label>
+                                            <input type="text" id="lastName" placeholder="Digite seu Segundo Nome" class="form-control">
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <label for="email">Email</label>
+                                            <input type="text" id="email" placeholder="Digite seu Email" class="form-control">
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <label for="assunto">Assunto</label>
+                                            <input type="text" id="assunto" placeholder="Digite o Assunto" class="form-control">
+                                        </div>
+                                        <div class="col-12 mt-3">
+                                            <label for="menssagem">Menssagem</label>
+                                            <textarea name="menssagem" id="menssagem" placeholder="Digite sua Menssagem" class="form-control w-100" rows="10"></textarea>
+                                        </div>
+                                        <input type="submit" class="btn btn-login btn-block mt-4" value="Enviar">
+                                    </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section> 
+            <script>
+function validar(formulario){
+
+var firstName = formulario.firstName.value;
+var lastName = formulario.lastName.value;
+var email = formulario.email.value;
+var assunto = formulario.assunto.value;
+var menssagem = formulario.menssagem.value;
+var erro = false
+    
+// NOME
+
+if (firstName == "") {
+    alert("O campo Primeiro Nome está vazio");
+    document.formulario.firstName.focus();
+    var erro = true
+}
+
+else if (lastName == "") {
+    alert("O campo Ultimo Nome está vazio");
+    document.formulario.lastName.focus();
+    var erro = true
+}
+
+else if (lastName.indexOf(" ") == -1) {
+    alert("Preencha o seu nome copleto");
+    document.formulario.lastName.focus();
+    var erro = true
+}
+
+// EMAIL 
+
+if (email == "") {
+    alert("O campo email está vazio");
+    document.formulario.email.focus();
+    var erro = true
+}
+else if (email.indexOf("@") == -1 ) {
+    alert("Preencha seu email como escrito no exemplo");
+    document.formulario.email.focus();
+    var erro = true
+}
+
+// ASSUNTO
+
+if (assunto == "") {
+    alert("O campo assunto está vazio");
+    document.formulario.assunto.focus();
+    var erro = true
+}
+
+else if (assunto.length < 8) {
+    alert("Este Assunto é muito pequeno");
+    document.formulario.assunto.focus();
+    var erro = true
+}
+
+// MENSSAGEM
+
+if (menssagem == "") {
+    alert("O campo menssagem está vazio");
+    document.formulario.menssagem.focus();
+    var erro = true
+}
+
+else if (menssagem.length < 25) {
+    alert("Esta Menssagem é muito pequena");
+    document.formulario.menssagem.focus();
+    var erro = true
+}
+
+if (erro == true) {
+    return false
+}else{
+    alert("Obrigado " + firstName + ' '+ lastName + " os seus dados foram encaminhados com sucesso!");
+    return true;
+}
+}
+            </script>
+    {% endblock %}

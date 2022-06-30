@@ -1,0 +1,67 @@
+{% extends 'base.html' %}
+    {% block header %}   
+    {% endblock header %}
+    {% block sub_header %}
+        <div class="container-fluid">
+            <div class="hello_world">
+                <a id="main-toggle2" href="#" class="nav-link text-white z-1">
+                    <i class="bi bi-arrow-up-short"></i>
+                </a>
+            </div>
+            <div id="main2" class="row row-cols-2 row-cols-xl-4 pt-3 pb-2">
+                {% for diciplina in diciplinas %}
+                    <div class="col p-0">
+                        <span class="diciplina-home c{{diciplina.numero}}">
+                            <a class="text-white" href="">{{ diciplina }}</a>
+                        </span>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    {% endblock %}
+    {% block content %}
+        <section>
+            <h2 class="page_title">Bem-vindo a nossa plataforma! Aproveite para se divertir enquanto estuda!</h2>
+            <div class="row row-cols-1 row-cols-xl-2 px-2 mt-4 mx-0 mb-0 text-dark">
+                <div class="col p-0">
+                    <div class="post p-5">
+                        <div class="post_content">
+                            <h2><a class="text-dark" href="todos-materiais/">Materias de Apoio</a></h2>
+                            <p class="py-1">Faça revisão dos conteudos que você aprende na escola!</p>
+                            <span class="py-1 dificuldade d1">Materiais</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col p-0">
+                    <div class="post p-5">
+                        <div class="post_content">
+                            <h2><a class="text-dark" href="todas-atividades/">Atividades</a></h2>
+                            <p class="py-1">Aproveite para encarar desafios e melhorar seu conhecimento.</p>
+                            <span class="py-1 dificuldade d3">Atividades</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col p-0">
+                    <div class="post p-5">
+                        <div class="post_content">
+                            <h2>Jogos e Brincadeiras</a></h2>
+                            <p class="py-1">Em Breve traremos mais diversão junto com seus estudos....</p>
+                            <span class="py-1 dificuldade d2">Em Breve</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col p-0">
+                    <div class="post p-5">
+                        <div class="post_content">
+                            <h2>Mapas Mentais</h2>
+                            <p class="py-1">Em Breve traremos mais diversão junto com seus estudos....</p>
+                            <span class="py-1 dificuldade d2">Em Breve</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+{% endblock %}
+
+
+    

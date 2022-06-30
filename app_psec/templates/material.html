@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+    {% block content %}
+    <div class="container p-5">
+        <div class="post">
+            <div class="post_content">
+                <p class="py-1">{{ material.disciplina|safe }}</p>
+                <h2><a href="/material/{{material.pk}}/">{{ material.titulo|safe }}</a></h2>
+                {{ material.resumo|safe|linebreaks }}
+                {{ material.texto|safe|linebreaks }}
+        </div>
+    </div>
+    {% endblock content %}

@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+    {% block content %}
+        <div class="container p-5">
+            <div class="atividade">
+                <h2><a href="">{{ atividade.titulo|safe }}</a></h2>
+                <p class="mb-3">{{ atividade.disciplina }}</p>
+                <span class="py-1 dificuldade d{{ atividade.dificuldade.numero }}">{{ atividade.dificuldade }}</span>
+                <ul class="nav nav-tabs" id="myTab" role="tablist">    
+                    <li class="nav-item d-none d-md-block" role="presentation">
+                        <button class="questao nav-link active" id="dicas-tab" data-bs-toggle="tab" data-bs-target="#dicas" type="button" role="tab" aria-controls="dicas" aria-selected="true">-</button>    
+                    </li>       
+                    {% for questao in atividade.questoes.all %}
+                    <li class="nav-item li-tab" role="presentation">
+                        <button class="questao nav-link q{{questao.numero}}" id="{{questao.numero}}-tab" data-bs-toggle="tab" data-bs-target="#q{{questao.numero}}" type="button" role="tab" aria-controls="{{questao.numero}}" aria-selected="false">{{questao.numero}}</button>    
+                    </li>
+                    {% endfor %}
+                </ul>
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="dicas" role="tabpanel" aria-labelledby="dicas-tab">
+                        <p class="py-4">{{ atividade.dica|safe }}</p>
+                    </div>
+                    {% for questao in atividade.questoes.all %}
+                    <div class="tab-pane fade mb-4" id="q{{questao.numero}}" role="tabpanel" aria-labelledby="{{questao.numero}}-tab">
+                        <p class="py-4">{{questao.titulo|safe}}</p>
+                        <a href="#" class="d-block alt text-dark p-3">{{questao.alt1|safe}}</a>
+                        <a href="#" class="d-block alt text-dark p-3">{{questao.alt2|safe}}</a>
+                        <a href="#" class="d-block alt text-dark p-3">{{questao.alt3|safe}}</a>
+                        <a href="#" class="d-block alt text-dark p-3">{{questao.alt4|safe}}</a>
+                        <button id="xs" class="btn btn-secondary btn-questao">
+                            <span class="rolex1 d-none">Resposta certa é a {{questao.show}}</span>
+                            <span class="rolex2">Ver a resposta Correta</span>
+                        </button>
+                        
+                    </div>
+                    {% endfor %}
+                    <script>
+                        $(function() {
+                            $('.btn-questao').click(function (e) {
+                                e.preventDefault()
+                                $('.rolex2').toggleClass('d-none')
+                            });
+                            $('.btn-questao').click(function (e) {
+                                e.preventDefault()
+                                $('.rolex1').toggleClass('d-none')
+                            });
+                            $('.btn-questao').click(function (e) {
+                                e.preventDefault()
+                                $('.btn-questao').toggleClass('btn-success')
+                            })
+                        });
+                    </script>
+                </div>
+            </div>
+            <div class="alert alert-primary" role="alert"> 
+                <p><i class="bi d-inline bi-info-circle"></i> Atividade Interativa ( clique na alternativa que achar correta )</p>
+            </div>
+        </div> 
+    {% endblock content %}
