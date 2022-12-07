@@ -4,7 +4,7 @@ Instituto Federal Catarinense - Curso Técnico em Informática - Projeto Integra
 
 P.S.E.C - PROJETO DE SUPORTE ESPECIAL PARA CRIANÇAS
 
-/ ----------------------------------------------------------------------------------------------------------------------------------------------------- /
+/ ----------------------------------------------------------------------------------------------- /
 
 -- Descrição Geral do Projeto --
 
