@@ -1,0 +1,20 @@
+[tool.poetry]
+name = "poetry init"
+version = "0.1.0"
+description = ""
+authors = ["Mateus Lopes Albano <50590861+mateus-lopes@users.noreply.github.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+django = "^4.2.6"
+pillow = "^10.0.1"
+prettier = "^0.0.7"
+django-ckeditor = "^6.7.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+
