@@ -4,9 +4,9 @@ Instituto Federal Catarinense - Curso Técnico em Informática - Projeto Integra
 
 P.S.E.C - PROJETO DE SUPORTE ESPECIAL PARA CRIANÇAS
 
-/ ----------------------------------------------------------------------------------------------- /
-
--- Descrição Geral do Projeto --
+____
+ 
+## Descrição Geral do Projeto
 
 • Tema: Educação 
 
@@ -18,7 +18,7 @@ P.S.E.C - PROJETO DE SUPORTE ESPECIAL PARA CRIANÇAS
 
 • Visão Geral: Infelizmente há poucos recursos oferecidos a esse público na internet, acredito que é muito importante a produção de materiais específicos e oportunizar o acesso a portais de educação que contenham esses materiais. Pensando nisso, criamos o projeto SECE, um portal Educativo com materiais de apoio e jogos educacionais tendo suporte total a crianças especiais. 
 
--- Trabalhos Correlatos --
+## Trabalhos Correlatos
 
 • Portal de Ensino Remoto: 
 
